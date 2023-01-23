@@ -22,9 +22,9 @@ jobs:
         run: npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard
       
       # Generate output reports in artifcats
-      - name: Output Report
+      - name: Output of the Reports
+        if: always()
         uses: actions/upload-artifact@v2
         with:
-         name: build
-      #    if-no-files-found: error
-         path: build
+         name: TestReport
+         path: ./cypress/reports
