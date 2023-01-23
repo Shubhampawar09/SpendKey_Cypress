@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-23T06:56:59.710Z",
+    "end": "2023-01-23T06:57:35.213Z",
+    "duration": 35503,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac39ee1b-617b-4523-a9ae-5be01ce0107f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\homepage-tests.cy.js",
+      "file": "cypress\\e2e\\homepage-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7529701e-7aea-42f6-8813-e1f80e02a996",
+          "title": "Validate elements on home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify home page elements",
+              "fullTitle": "Validate elements on home page Verify home page elements",
+              "timedOut": null,
+              "duration": 15214,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/dashboard');\n_Utils.utils.getElement(_HomePage.homePage.spendkeyLogo).should(\"be.visible\");\n_Utils.utils.getElement(_HomePage.homePage.loggedInUser).should('have.text', 'Abhishek');\ncy.wait(5000);",
+              "err": {},
+              "uuid": "bc92229d-72ed-43a8-a66e-c6f5e1b81c7f",
+              "parentUUID": "7529701e-7aea-42f6-8813-e1f80e02a996",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the sidebar menu options and text are visible",
+              "fullTitle": "Validate elements on home page Verify the sidebar menu options and text are visible",
+              "timedOut": null,
+              "duration": 13363,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/dashboard');\ncy.reload();\n_Utils.utils.getElement(_HomePage.homePage.preReports).should(\"be.visible\").contains(\" Pre Reports \");\n_Utils.utils.getElement(_HomePage.homePage.postReports).should(\"be.visible\").contains(\" Post Reports \");",
+              "err": {},
+              "uuid": "474d9383-f8ef-484d-915d-41e56e9a00c9",
+              "parentUUID": "7529701e-7aea-42f6-8813-e1f80e02a996",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify dropdown element text",
+              "fullTitle": "Validate elements on home page Verify dropdown element text",
+              "timedOut": null,
+              "duration": 6698,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/dashboard');\ncy.reload();\n_Utils.utils.clickOn(_HomePage.homePage.preReports);\nvar array = _Utils.utils.getTextOfAllElements(_HomePage.homePage.preReportListElements);\ncy.wrap(array).should('deep.equal', this.data.preReportList);",
+              "err": {},
+              "uuid": "51327724-6bb2-4c40-b2b9-d3cf0447507e",
+              "parentUUID": "7529701e-7aea-42f6-8813-e1f80e02a996",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc92229d-72ed-43a8-a66e-c6f5e1b81c7f",
+            "474d9383-f8ef-484d-915d-41e56e9a00c9",
+            "51327724-6bb2-4c40-b2b9-d3cf0447507e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35275,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Spendkey Reports",
+        "embeddedScreenshots": true,
+        "quite": true,
+        "overwrite": false,
+        "json": true,
+        "html": false,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

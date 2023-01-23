@@ -2,10 +2,10 @@
 node_modules
 
 # Cypress
-cypress/results/*
-cypress/reports/*
-cypress/screenshots/*
-cypress/videos/*
+# cypress/results/*
+# cypress/reports/*
+# cypress/screenshots/*
+# cypress/videos/*
 
 # OS and misc
 **/.DS_Store
