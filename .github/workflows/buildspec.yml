@@ -1,21 +1,29 @@
-name: Regression Suite
-on: [push]
-jobs:
- Regression-Suite:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Checkout GitCode
-       uses: actions/checkout@v2
- 
-     - name: regression-tests
-       uses: cypress-io/github-action@v4
-       with:
-         command: npx cypress run
-         browser: chrome
+name: Cypress Tests
 
-     - name: Output of the Reports
-       if: always()
-       uses: actions/upload-artifact@v2
-       with:
-         name: TestReport
-         path: ./cypress/reports
+on: 
+ push:
+   branches: ["dev"]
+ pull_request:
+   branches: ["dev"]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      # Install NPM dependencies, cache them correctly     
+      - name: Install all dependencies
+        run: npm install
+        
+      # Run specflow headless
+      - name: Cypress run
+        run: npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard
+      
+      # Generate output reports in artifcats
+      - name: Output Report
+        uses: actions/upload-artifact@v2
+        with:
+         name: SpendKey Report
+         path: ./cypress/reports/html/
