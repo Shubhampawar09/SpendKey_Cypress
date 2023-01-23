@@ -3,7 +3,6 @@ This repository is for Cypress POC to demo cypress framework.
 
 Demo website used is 'https://demo.spendkey.app/dashboard'
 
-
 ## Pre-requisites 
 1. Install Visual studio code latest version on your local machine if not installed already.
 https://code.visualstudio.com/download#
@@ -12,7 +11,6 @@ https://git-scm.com/downloads
 3. Install node js latest version.
 https://nodejs.org/en/download/
 ## Installation
-
 
 1. Clone the repository using below command.
 
