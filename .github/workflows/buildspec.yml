@@ -25,5 +25,6 @@ jobs:
       - name: Output Report
         uses: actions/upload-artifact@v2
         with:
-         name: SpendKey Report
-         path: ./cypress/reports/html/
+         name: build
+      #    if-no-files-found: error
+         path: build
