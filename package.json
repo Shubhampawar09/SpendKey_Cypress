@@ -1,0 +1,27 @@
+{
+   "name": "spendkey-project",
+   "version": "1.0.0",
+   "description": "Automation Testcases for spendkey",
+   "main": "index.js",
+   "scripts": {
+      "test": "npx cypress open",
+      "regression": "npx cypress run",
+      "regression-headed": "npx cypress run --headed",
+      "cypress-open": "npx cypress open --config baseUrl=https://demo.spendkey.app/dashboard",
+      "cypress-run": "npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/TestrigTechnologies/Cypress-POC.git"
+   },
+   "author": "Testrig",
+   "license": "ISC",
+   "dependencies": {
+      "cypress": "^12.3.0",
+      "cypress-mochawesome-reporter": "^3.2.3"
+   },
+   "devDependencies": {
+      "cypress-json-results": "^1.2.1",
+      "cypress-xpath": "^2.0.1"
+   }
+}

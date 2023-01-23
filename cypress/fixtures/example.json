@@ -1,0 +1,9 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+
+  "preReportList":["Spend Overview","Spend by Category","Spend by Supplier","Spend by Country","Supplier by Txns. Count","Spend Distribution",
+                    "Spend Detail","Tail Spend","PO Non-PO Analysis","Savings Opportunity","Early Contract Renewal","Supplier Segmentation","Supplier Hierarchy"]
+
+}

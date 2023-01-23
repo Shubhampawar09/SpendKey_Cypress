@@ -1,0 +1,18 @@
+{
+  "cypress\\e2e\\homepage-tests.cy.js": {
+    "Validate elements on home page Verify home page elements": "passed",
+    "Validate elements on home page Verify the sidebar menu options and text are visible": "passed",
+    "Validate elements on home page Verify dropdown element text": "passed"
+  },
+  "cypress\\e2e\\login-tests.cy.js": {
+    "Verify Login Verify login with valid email and password": "passed"
+  },
+  "totals": {
+    "suites": 2,
+    "tests": 4,
+    "failed": 0,
+    "passed": 4,
+    "pending": 0,
+    "skipped": 0
+  }
+}
