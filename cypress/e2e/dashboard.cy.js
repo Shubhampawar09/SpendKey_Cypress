@@ -1,5 +1,5 @@
-describe.only("Verify Login", () => {
-    it("Verify login with valid email and password", () => {
+describe.only("Verify Dashboard", () => {
+    it("Welcome to dashboard", () => {
         cy.log("hello world")
     });
   });
