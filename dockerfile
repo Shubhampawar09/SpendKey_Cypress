@@ -20,6 +20,8 @@ RUN npm install
 
 ENTRYPOINT ["npm", "run"]
 
+RUN npx cypress run chrome:test
+
 VOLUME [ "/cypress/videos:/cypress-docker/cypress/videos" ]
 VOLUME [ "/cypress/reports:/cypress-docker/cypress/reports" ]
 
