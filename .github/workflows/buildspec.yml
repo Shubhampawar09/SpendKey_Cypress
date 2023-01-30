@@ -68,7 +68,7 @@
    Generate output reports in artifcats
      - name: Output of the Reports
        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: TestReport
-          path: ./cypress/reports
+       uses: actions/upload-artifact@v3
+       with:
+        name: TestReport
+        path: ./cypress/reports
