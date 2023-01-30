@@ -1,5 +1,4 @@
 #Base Image
-#FROM cypress/base:18.12.0
 
 FROM cypress/included:12.3.0
 
@@ -20,7 +19,8 @@ RUN npm install
 
 ENTRYPOINT ["npm", "run"]
 
-RUN npx cypress run chrome:test
+
+RUN npm run chrome:test
 
 VOLUME [ "/cypress/videos:/cypress-docker/cypress/videos" ]
 VOLUME [ "/cypress/reports:/cypress-docker/cypress/reports" ]
