@@ -38,7 +38,7 @@
 
 
 
-name: Cypress project
+  name: Cypress project
 
   on: 
     push:
