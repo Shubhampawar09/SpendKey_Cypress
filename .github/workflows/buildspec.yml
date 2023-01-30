@@ -15,7 +15,7 @@ jobs:
 
       # Build the docker image   
       # - name: Build the docker image  
-      - run: docker build -t spendkey-cypress
+      - run: docker build -t spendkey-cypress .
 
       # Run the docker image
       # - name: Run the docker image
