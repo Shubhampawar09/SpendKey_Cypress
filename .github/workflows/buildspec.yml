@@ -14,12 +14,12 @@ jobs:
         uses: actions/checkout@v3
 
       # Build the docker image   
-      # - name: Build the docker image  
-      - run: docker build -t spendkey-cypress .
+      - name: Build the docker image  
+        run: docker build -t spendkey-cypress .
 
       # Run the docker image
-      # - name: Run the docker image
-      - run: docker-compose run e2e-chrome  
+      - name: Run the docker image
+        run: docker-compose run e2e-chrome  
       # Install NPM dependencies, cache them correctly     
       # - name: Install all dependencies
       #   run: npm install
