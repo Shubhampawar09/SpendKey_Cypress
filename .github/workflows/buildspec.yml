@@ -23,7 +23,7 @@ jobs:
       # Run the docker image
       
       - name: build & push image
-        run: docker build -t spendkey-cypress .
+        run: docker build -t spendkey .
 
       - name: run docker image
         run: docker-compose run e2e-chrome   
