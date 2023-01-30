@@ -19,7 +19,7 @@ COPY ./cypress ./cypress
 RUN npm install
 # RUN docker build -t spendkey .
 
-
+RUN npm run chrome:test
 ENTRYPOINT ["npm", "run"]
 
 # RUN npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard
