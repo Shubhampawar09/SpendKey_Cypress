@@ -23,9 +23,9 @@ jobs:
       #   run: docker-compose run e2e-chrome   
       
       - name: Generate report
-      continue-on-error: true
-      uses: cypress-io/github-action@v4.2.0
-      with:
+        continue-on-error: true
+        uses: cypress-io/github-action@v4.2.0
+        with:
          start: node cypress_test_reports.js    
 
 
