@@ -12,14 +12,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
+
+      # Build the docker image   
+      - name: Build the docker image  
+      - run: docker build -t spendkey-cypress
+
+      # Run the docker image
+      - name: Run the docker image
+      - run: docker-compose run e2-chrome  
       # Install NPM dependencies, cache them correctly     
-      - name: Install all dependencies
-        run: npm install
+      # - name: Install all dependencies
+      #   run: npm install
         
       # Run specflow headless
-      - name: Cypress run
-        run: npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard
+      # - name: Cypress run
+      #   run: npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard
       
       # Generate output reports in artifcats
       - name: Output of the Reports
