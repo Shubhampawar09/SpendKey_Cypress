@@ -20,4 +20,7 @@ RUN npm install
 
 ENTRYPOINT ["npm", "run"]
 
+VOLUME [ "/cypress/videos:/cypress-docker/cypress/videos" ]
+VOLUME [ "/cypress/reports:/cypress-docker/cypress/reports" ]
+
 # RUN npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard

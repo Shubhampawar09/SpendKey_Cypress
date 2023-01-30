@@ -19,16 +19,10 @@ jobs:
       - name: build & push image
         run: docker build -t spendkey-cypress .
 
-      # - name: run docker image
-      #   run: docker-compose run e2e-chrome   
+      - name: run docker image
+        run: docker-compose run e2e-chrome   
       
-      - name: Generate report
-        continue-on-error: true
-        uses: cypress-io/github-action@v4.2.0
-        with:
-         start: node cypress_test_reports.js    
-
-
+    
       # Generate output reports in artifcats
       - name: Output of the Reports
         if: always()
