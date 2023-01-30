@@ -19,7 +19,7 @@ jobs:
 
       # Run the docker image
       # - name: Run the docker image
-      - run: docker-compose run e2-chrome  
+      - run: docker-compose run e2e-chrome  
       # Install NPM dependencies, cache them correctly     
       # - name: Install all dependencies
       #   run: npm install
