@@ -16,12 +16,12 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
-      require('cypress-json-results')({
-        on,
-        "overwrite": true,
-      })
+      // require('cypress-json-results')({
+      //   on,
+      //   "overwrite": true,
+      // })
     },
-    // baseUrl :'https://demo.spendkey.app/dashboard',
+     baseUrl :'https://demo.spendkey.app/dashboard',
   },
   env: {
     DEFAULT_USER_EMAIL: "abhishek@cloudaeon.net",

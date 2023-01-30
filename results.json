@@ -1,18 +1,21 @@
 {
+  "cypress\\e2e\\dashboard.cy.js": {
+    "Verify Dashboard Welcome to dashboard": "passed"
+  },
   "cypress\\e2e\\homepage-tests.cy.js": {
-    "Verify home page Verify home page elements": "passed",
-    "Verify home page Verify the sidebar menu options and text are visible": "passed",
-    "Verify home page Verify dropdown element text": "passed"
+    "Verify home page Verify home page elements": "failed",
+    "Verify home page Verify the sidebar menu options and text are visible": "skipped",
+    "Verify home page Verify dropdown element text": "skipped"
   },
   "cypress\\e2e\\login-tests.cy.js": {
-    "Verify Login Verify login with valid email and password": "passed"
+    "Verify Login Verify login with valid email and password": "failed"
   },
   "totals": {
-    "suites": 2,
-    "tests": 4,
-    "failed": 0,
-    "passed": 4,
+    "suites": 3,
+    "tests": 5,
+    "failed": 2,
+    "passed": 1,
     "pending": 0,
-    "skipped": 0
+    "skipped": 2
   }
 }

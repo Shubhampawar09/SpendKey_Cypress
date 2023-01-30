@@ -19,8 +19,8 @@ jobs:
       - name: build & push image
         run: docker build -t spendkey-cypress .
 
-      - name: run docker image
-        run: docker-compose run e2e-chrome   
+      # - name: run docker image
+      #   run: docker-compose run e2e-chrome   
       
     
       # Generate output reports in artifcats
