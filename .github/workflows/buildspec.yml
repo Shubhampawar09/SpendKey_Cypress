@@ -15,13 +15,18 @@ jobs:
       
       # Build docker image
       - name: build & push docker image
-        run: docker build -t spendkey-cypress .  
-    
+        run: docker build -t spendkey-cypress . 
+        
+      - name: Set Time
+        run: |
+         echo "date=$(date +"%Y-%m-%d")" >> $GITHUB_ENV  
+        
       # Generate output reports in artifcats
       - name: Output of the Reports
         if: always()
         continue-on-error: true
         uses: actions/upload-artifact@v3
         with:
-         name: TestReport
+         name: TestReport ${{env.date}}
          path: ./cypress/reports
+  

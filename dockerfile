@@ -1,5 +1,4 @@
-#Base Image
-
+#base image
 FROM cypress/included:12.3.0
 
 #create a folder Spendkey_cypress in container 
@@ -14,15 +13,16 @@ COPY ./package-lock.json .
 COPY ./cypress.config.js .
 COPY ./cypress ./cypress 
 
-#Install cypress dependencies in the work directory
+#install cypress dependencies in the work directory
 RUN npm install
 
+#entrypoint
 ENTRYPOINT ["npm", "run"]
 
-
+#docker run command
 RUN npm run chrome:test
 
+#store the reports in local
 VOLUME [ "/cypress/videos:/cypress-docker/cypress/videos" ]
 VOLUME [ "/cypress/reports:/cypress-docker/cypress/reports" ]
 
-# RUN npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard
