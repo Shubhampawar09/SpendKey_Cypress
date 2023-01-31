@@ -1,9 +1,0 @@
-version: "3"
-services:
-  e2e-chrome:
-    image: "spendkey"
-    command: "chrome:test"
-    volumes:
-      - ./cypress/videos:/cypress-docker/cypress/videos
-      - ./cypress/reports:/cypress-docker/cypress/reports
-  

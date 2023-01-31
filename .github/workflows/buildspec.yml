@@ -14,12 +14,8 @@ jobs:
         uses: actions/checkout@v3
       
       # Build docker image
-      - name: build & push image
-        run: docker build -t spendkey-cypress .
-
-      # Run docker image
-      # - name: run docker image
-      #   run: docker-compose run e2e-chrome   
+      - name: build & push docker image
+        run: docker build -t spendkey-cypress .  
     
       # Generate output reports in artifcats
       - name: Output of the Reports
