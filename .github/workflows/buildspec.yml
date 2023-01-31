@@ -19,15 +19,14 @@ jobs:
         
       - name: Set Time
         run: |
-         #echo "date=$(date +"%Y-%m-%d")" >> $GITHUB_ENV  
-         echo "MY_DATE=$(date +'%Y-%m-%dT%H-%M-%S')" >> $GITHUB_ENV
-         
+         echo "date=$(date +"%Y-%m-%d")" >> $GITHUB_ENV  
+        
       # Generate output reports in artifcats
       - name: Output of the Reports
         if: always()
         continue-on-error: true
         uses: actions/upload-artifact@v3
         with:
-         name: TestReport ${{env.MY_DATE}}
+         name: TestReport ${{env.date}}
          path: ./cypress/reports
   
