@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-01T10:12:08.780Z",
+    "end": "2023-02-01T10:12:09.239Z",
+    "duration": 459,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5664e19a-072e-4be5-8b82-71b78cf062b6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login-tests.cy.js",
+      "file": "cypress\\e2e\\login-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04f81721-c953-4707-8435-30e236d0d849",
+          "title": "Verify Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login with valid email and password",
+              "fullTitle": "Verify Login Verify login with valid email and password",
+              "timedOut": null,
+              "duration": 353,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\login-tests.cy.js\\\\Verify Login -- Verify login with valid email and password (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.visit('/login');\n_Utils.utils.clickOn(_LoginPage.loginPage.emailAddressField);\n_Utils.utils.clearAndType(_LoginPage.loginPage.emailAddressField, email);\n_Utils.utils.clickOn(_LoginPage.loginPage.passwordField);\n_Utils.utils.clearAndType(_LoginPage.loginPage.passwordField, password);\n_Utils.utils.clickOn(_LoginPage.loginPage.loginButton);\n_Utils.utils.getElement(_HomePage.homePage.loggedInUser).should('have.text', 'Abhishek');\ncy.wait(3000);\ncy.screenshot('LoginPage');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/login\n\nWe failed looking for this file at the path:\n\n/Users/Dell/Desktop/git/cypress-Spendkey/SpendKey_Cypress/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/login\n\nWe failed looking for this file at the path:\n\n/Users/Dell/Desktop/git/cypress-Spendkey/SpendKey_Cypress/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at <unknown> (http://localhost:63473/__cypress/runner/cypress_runner.js:138152:84)\n    at visitFailedByErr (http://localhost:63473/__cypress/runner/cypress_runner.js:137560:12)\n    at <unknown> (http://localhost:63473/__cypress/runner/cypress_runner.js:138135:13)\n    at tryCatcher (http://localhost:63473/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise._settlePromiseFromHandler (http://localhost:63473/__cypress/runner/cypress_runner.js:6849:31)\n    at Promise._settlePromise (http://localhost:63473/__cypress/runner/cypress_runner.js:6906:18)\n    at Promise._settlePromise0 (http://localhost:63473/__cypress/runner/cypress_runner.js:6951:10)\n    at Promise._settlePromises (http://localhost:63473/__cypress/runner/cypress_runner.js:7027:18)\n    at _drainQueueStep (http://localhost:63473/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (http://localhost:63473/__cypress/runner/cypress_runner.js:3614:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:63473/__cypress/runner/cypress_runner.js:3630:5)\n    at Async.drainQueues (http://localhost:63473/__cypress/runner/cypress_runner.js:3500:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/login-tests.cy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "46334a76-f3e3-4eb5-af79-cb0d21aa4c4a",
+              "parentUUID": "04f81721-c953-4707-8435-30e236d0d849",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "46334a76-f3e3-4eb5-af79-cb0d21aa4c4a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 353,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Spendkey Reports",
+        "embeddedScreenshots": true,
+        "quite": true,
+        "overwrite": false,
+        "json": true,
+        "html": false,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
