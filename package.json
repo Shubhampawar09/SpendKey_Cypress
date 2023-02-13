@@ -10,7 +10,7 @@
       "cypress-open": " cypress open --config baseUrl=https://demo.spendkey.app/dashboard",
       "chrome:test": " cypress run --config baseUrl=https://demo.spendkey.app/dashboard --browser chrome --headed",
       "merge-reports": "npx cypress run mochawesome-merge ./cypress/reports/html/.jsons/*.json | out-file -encoding ascii ./report1.json",
-      "api-test": "npx cypress run --spec ./cypress/e2e/APITest/*.cy.js"
+      "api-test": "npx cypress run --spec ./cypress/e2e/ApiTest/*.cy.js"
    },
    "repository": {
       "type": "git",
