@@ -23,7 +23,9 @@ ENTRYPOINT ["npm", "run"]
 #RUN npm run api-test
 #RUN npm run chrome:test
 
+RUN docker-compose run api-test
+
 #store the reports in local
-VOLUME [ "/cypress/videos:/cypress-docker/cypress/videos" ]
-VOLUME [ "/cypress/reports:/cypress-docker/cypress/reports" ]
+# VOLUME [ "/cypress/videos:/cypress-docker/cypress/videos" ]
+# VOLUME [ "/cypress/reports:/cypress-docker/cypress/reports" ]
 

@@ -1,8 +1,16 @@
-version: '3'
+version: "3"
 services:
- api-test:
-  image: "cypress-spendkey-docker"
-  command: "api-test"
+  # this container will run Cypress test using built-in Electron browser
+  api-test:
+    image: "cypress-spendkey-docker"
+    command: "api-test"
+    volumes:
+      - ./cypress/videos:/cypress-docker/cypress/videos
+      - ./cypress/reports:/cypress-docker/cypress/reports
 
   ui-test:
-   image: 
+    image: "cypress-spendkey-docker"
+    command: "chrome:test"
+    volumes:
+      - ./cypress/videos:/cypress-docker/cypress/videos
+      - ./cypress/reports:/cypress-docker/cypress/reports
