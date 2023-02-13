@@ -1,6 +1,6 @@
  
-import { homePage } from "../support/pageObjects/HomePage";
-import { utils } from "../support/Utilities/Utils";
+import { homePage } from "../../support/pageObjects/HomePage";
+import { utils } from "../../support/Utilities/Utils";
 
 const {
   DEFAULT_USER_EMAIL: email,

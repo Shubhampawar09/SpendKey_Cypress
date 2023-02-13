@@ -1,14 +1,14 @@
 
-import { homePage } from "../support/pageObjects/HomePage";
-import { loginPage } from "../support/pageObjects/LoginPage";
-import { utils } from "../support/Utilities/Utils";
+import { homePage } from "../../support/pageObjects/HomePage";
+import { loginPage } from "../../support/pageObjects/LoginPage";
+import { utils } from "../../support/Utilities/Utils";
 
 const {
   DEFAULT_USER_EMAIL: email,
   DEFAULT_USER_PASSWORD: password,
 } = Cypress.env();
 
-describe.only("Verify Login", () => {
+describe("Verify Login", () => {
   it("Verify login with valid email and password", () => {
     cy.visit('/login');
     utils.clickOn(loginPage.emailAddressField);

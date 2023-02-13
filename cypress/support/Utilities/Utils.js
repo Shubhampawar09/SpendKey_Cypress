@@ -321,6 +321,21 @@ class Utils {
         });
     }
   }
+
+  getRndInteger(min, max) {
+    var number = Math.floor(Math.random() * (max - min) ) + min;
+  return number
 }
+
+
+stringfyTheElement(element){
+  return JSON.stringify(element);
+}
+
+replaceQuotation(element){
+  return element.replace(/['"]+/g,"");
+}
+}
+
 
 export const utils = new Utils();

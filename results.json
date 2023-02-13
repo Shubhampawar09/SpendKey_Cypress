@@ -1,21 +1,19 @@
 {
-  "cypress\\e2e\\dashboard.cy.js": {
-    "Verify Dashboard Welcome to dashboard": "passed"
+  "cypress\\e2e\\ApiTest\\GetRequest.cy.js": {
+    "Validate Get Request verify existing user and login validate the existing user": "passed"
   },
-  "cypress\\e2e\\homepage-tests.cy.js": {
-    "Verify home page Verify home page elements": "failed",
-    "Verify home page Verify the sidebar menu options and text are visible": "skipped",
-    "Verify home page Verify dropdown element text": "skipped"
+  "cypress\\e2e\\ApiTest\\PostRequest.cy.js": {
+    "Post request in cypress Create users with post request": "failed"
   },
-  "cypress\\e2e\\login-tests.cy.js": {
-    "Verify Login Verify login with valid email and password": "failed"
+  "cypress\\e2e\\ApiTest\\Putrequest.cy.js": {
+    "Update the user using put request in cypress update user by id": "passed"
   },
   "totals": {
-    "suites": 3,
-    "tests": 5,
-    "failed": 2,
-    "passed": 1,
+    "suites": 4,
+    "tests": 3,
+    "failed": 1,
+    "passed": 2,
     "pending": 0,
-    "skipped": 2
+    "skipped": 0
   }
 }

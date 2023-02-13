@@ -20,6 +20,7 @@ RUN npm install
 ENTRYPOINT ["npm", "run"]
 
 #docker run command
+RUN npm run api-test
 RUN npm run chrome:test
 
 #store the reports in local
