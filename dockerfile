@@ -11,6 +11,7 @@ WORKDIR /cypress-docker
 COPY ./package.json .
 COPY ./package-lock.json .
 COPY ./cypress.config.js .
+COPY ./docker-compose.yml .
 COPY ./cypress ./cypress 
 
 #install cypress dependencies in the work directory
