@@ -1,0 +1,8 @@
+version: '3'
+services:
+ api-test:
+  image: "cypress-spendkey-docker"
+  command: "api-test"
+
+  ui-test:
+   image: 
