@@ -18,6 +18,9 @@ jobs:
       # Build docker image
       - name: build & push docker image
         run: docker build -t spendkey-cypress . 
+      
+      - name: run docker compose file
+        run: docker-compose run api-test
         
       - name: Set Time
         run: |
