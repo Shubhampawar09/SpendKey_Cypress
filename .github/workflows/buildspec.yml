@@ -53,7 +53,7 @@ jobs:
          
          
       - name: Notify second branch
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v1
         with:
          token: ${{secrets.PAN_TOKEN}}
          repository: https://github.com/Shubhampawar09/SpendKey_Cypress/tree/subbranch
