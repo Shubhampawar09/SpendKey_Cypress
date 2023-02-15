@@ -17,7 +17,9 @@
 import './commands'
 import 'cypress-mochawesome-reporter/register'
 import 'cypress-plugin-api'
+import { register } from "@mocks-server/cypress-commands";
 
+register();
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 Cypress.on("uncaught:exception", (err, runnable) => {
