@@ -18,7 +18,7 @@ module.exports = defineConfig({
       //   "overwrite": true,
       // })
     },
-     //baseUrl :'https://demo.spendkey.app/dashboard'
+     baseUrl :'https://demo.spendkey.app/dashboard'
   },
   env: {
     DEFAULT_USER_EMAIL: "abhishek@cloudaeon.net",
