@@ -22,7 +22,7 @@ jobs:
         
       - name: Set Time
         run: |
-         echo "date=$(date +"%Y-%m-%d")" >> $GITHUB_ENV   
+         echo "date=$(date +"%Y-%m-%d-%H-%M-%S")" >> $GITHUB_ENV   
         
       # Generate output reports in artifcats
       - name: Output Reports
