@@ -20,6 +20,20 @@ jobs:
       - name: run api tests
         run: docker-compose run api-test
         
+      - name: Set Time
+        run: |
+         echo "date=$(date +"%Y-%m-%d")" >> $GITHUB_ENV   
+        
+      # Generate output reports in artifcats
+      - name: Output Reports
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v3
+        with:
+         name: API Report ${{env.date}}
+         path: ./cypress/reports  
+        
+        
       - name: run ui tests
         run: docker-compose run ui-test
         
@@ -28,11 +42,11 @@ jobs:
          echo "date=$(date +"%Y-%m-%d")" >> $GITHUB_ENV  
         
       # Generate output reports in artifcats
-      - name: Output of the Reports
+      - name: Output Reports
         if: always()
         continue-on-error: true
         uses: actions/upload-artifact@v3
         with:
-         name: TestReport ${{env.date}}
+         name: UI Report ${{env.date}}
          path: ./cypress/reports
   
