@@ -56,7 +56,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
          token: ${{secrets.PAN_TOKEN}}
-         repository: shubham09/Spendkey_Cypress
+         repository: https://github.com/Shubhampawar09/SpendKey_Cypress.git
          event-type: start-sub-workflow 
          client-payload: '{"ref":"refs/heads/subbranch"}'
          
