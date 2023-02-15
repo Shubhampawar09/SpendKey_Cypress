@@ -8,8 +8,8 @@
       "cypress-open": " npx cypress open --config baseUrl=https://demo.spendkey.app/dashboard",
       "chrome:test": " npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard --browser chrome --headed",
       "merge-reports": "npx cypress run mochawesome-merge ./cypress/reports/html/.jsons/*.json | out-file -encoding ascii ./report1.json",
-      "api-test": "npx cypress run --spec ./cypress/e2e/ApiTest/*.cy.js",
-      "ui-test": "npx cypress run --spec ./cypress/e2e/UiTest/*.cy.js"
+      "api-test": "npx cypress run --spec ./cypress/e2e/apiTest/*.cy.js",
+      "ui-test": "npx cypress run --spec ./cypress/e2e/uiTest/*.cy.js"
 
    },
    "repository": {
