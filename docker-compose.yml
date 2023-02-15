@@ -10,7 +10,7 @@ services:
 
   ui-test:
     image: "spendkey-cypress"
-    command: "chrome:test"
+    command: "ui:test"
     volumes:
       - ./cypress/videos:/cypress-docker/cypress/videos
       - ./cypress/reports:/cypress-docker/cypress/reports
