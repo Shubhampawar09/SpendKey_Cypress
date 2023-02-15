@@ -1,10 +1,13 @@
-name: Cypress Spenkey
+name: Second Spenkey
 
 on: 
-  workflow_dispatch:
-  workflow_run:
-     workflows: ["dev"]
-     types: ["completed"]
+  repository_dispatch:
+   types: [start-sub-workflow]
+  
+  #workflow_dispatch:
+  #workflow_run:
+  #   workflows: ["dev"]
+  #   types: ["completed"]
 
 jobs:
   cypress-run:
@@ -12,42 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
-      # Build docker image
-      - name: build & push docker image
-        run: docker build -t spendkey-cypress .
-
-      - name: run api tests
-        run: docker-compose run api-test
-        
-      - name: Set Time
+      - name: print message
         run: |
-         echo "date=$(TZ=Asia/Kolkata date "+%Y-%m-%d %H-%M-%S")" >> $GITHUB_ENV   
-        
-      # Generate output reports in artifcats
-      - name: Output Reports
-        if: always()
-        continue-on-error: true
-        uses: actions/upload-artifact@v3
-        with:
-         name: API Report ${{env.date}}
-         path: ./cypress/reports  
-        
-        
-      - name: run ui tests
-        run: docker-compose run ui-test 
-      
-     # - name: set ist time
-     #   run: |
-     #    echo "Current ist time is $(TZ=Asia/Kolkata date "+%Y-%m-%d %H:%M:%S")"
-     
-     
-      # Generate output reports in artifcats
-      - name: Output Reports
-        if: always()
-        continue-on-error: true
-        uses: actions/upload-artifact@v3
-        with:
-         name: UI Report ${{env.date}}
-         path: ./cypress/reports
+         echo: "this is my second ymal"
   
