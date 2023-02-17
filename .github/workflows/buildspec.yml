@@ -53,13 +53,11 @@ jobs:
          
          
       - name: Notify second branch
-        uses: peter-evans/repository-dispatch@v1
+        uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
          token: ${{secrets.PAN_TOKEN}}
-         repository: Shubhampawar09/https://github.com/Shubhampawar09/SpendKey_Cypress/tree/subbranch
-         event-type: start-sub-workflow 
-         client-payload: '{"ref":"refs/heads/subbranch"}'
-         
+         repository: SpendKey_Cypress
+         workflow_file_name: sub.yml
          
          
   
