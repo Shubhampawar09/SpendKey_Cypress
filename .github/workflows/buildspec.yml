@@ -55,6 +55,7 @@ jobs:
       - name: Notify second branch
         uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
+         owner: Sub branch
          token: ${{secrets.PAN_TOKEN}}
          repository: SpendKey_Cypress
          workflow_file_name: sub.yml
