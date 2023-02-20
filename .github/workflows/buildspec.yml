@@ -20,8 +20,9 @@ jobs:
       - name: run api tests
         run: docker-compose run api-test
         
-     # - name: Set Time
-      #  run: |
+      - name: Set Time
+        run: |
+          echo "date = $(TZ=Asia/Kolkata date "+%Y-%m-%d %H:%M:%S")"
         
       # Generate output reports in artifcats
       - name: Output Reports
@@ -32,14 +33,8 @@ jobs:
          name: API Report ${{env.date}}
          path: ./cypress/reports  
         
-        
       - name: run ui tests
-        run: docker-compose run ui-test 
-      
-      - name: set ist time
-        run: |
-         echo "Current ist time is $(TZ=Asia/Kolkata date "+%Y-%m-%d %H:%M:%S")"
-     
+        run: docker-compose run ui-test       
      
       # Generate output reports in artifcats
       - name: Output Reports
