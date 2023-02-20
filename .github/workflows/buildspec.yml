@@ -49,13 +49,3 @@ jobs:
         with:
          name: UI Report ${{env.date}}
          path: ./cypress/reports
-             
-      - name: Notify second branch
-        uses: convictional/trigger-workflow-and-wait@v1.3.0
-        with:
-         owner: Shubhampawar09
-         github_token: ${{secrets.PAN_TOKEN}}
-         repo: SpendKey_Cypress
-         ref: subbranch
-         workflow_file_name: buildspec.yml
-         
