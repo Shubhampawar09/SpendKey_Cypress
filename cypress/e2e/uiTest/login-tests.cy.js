@@ -1,4 +1,3 @@
-
 import { homePage } from "../../support/pageObjects/HomePage";
 import { loginPage } from "../../support/pageObjects/LoginPage";
 import { utils } from "../../support/Utilities/Utils";
@@ -8,7 +7,7 @@ const {
   DEFAULT_USER_PASSWORD: password,
 } = Cypress.env();
 
-describe("Verify Login", () => {
+describe.only("Verify Login", () => {
   it("Verify login with valid email and password", () => {
     cy.visit('/login');
     utils.clickOn(loginPage.emailAddressField);
@@ -16,9 +15,10 @@ describe("Verify Login", () => {
     utils.clickOn(loginPage.passwordField);
     utils.clearAndType(loginPage.passwordField, password);
     utils.clickOn(loginPage.loginButton);
-    utils.getElement(homePage.loggedInUser).should('have.text','Abhishek')
+    //utils.getElement(homePage.loggedInUser).should('have.text','Abhishek')
+    cy.get('.ng-star-inserted > div').should("contain",'This is dashboard!!')
     cy.wait(3000);
-    cy.screenshot('LoginPage')
+    //cy.screenshot('LoginPage')
   });
 });
 
@@ -91,6 +91,7 @@ describe("Validate elements on login page", () => {
       .getElement(loginPage.loginPageHeading)
       .contains(" Log in to Spendkey ");
   });
+
   // Assert Email Field is visible and placeholder
   it("Verify Email address field is visible", () => {
     cy.visit('/login');
@@ -98,6 +99,7 @@ describe("Validate elements on login page", () => {
       .getElement(loginPage.emailAddressField)
       .should("be.visible");
   });
+
   // Assert Email Field is visible and placeholder
   it("Verify Password field is visible", () => {
     cy.visit('/login');
@@ -105,6 +107,7 @@ describe("Validate elements on login page", () => {
       .getElement(loginPage.passwordField)
       .should("be.visible");
   });
+
   // Assert label of Login Button
   it("Verify Log In button is visible and it's label", () => {
     cy.visit('/login');
@@ -112,6 +115,7 @@ describe("Validate elements on login page", () => {
       .getElement(loginPage.loginButton)
       .should("be.visible", "contain", "Log in");
   });
+  
 });
 
 

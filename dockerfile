@@ -13,6 +13,8 @@ COPY ./package-lock.json .
 COPY ./cypress.config.js .
 COPY ./docker-compose.yml .
 COPY ./cypress/support/Utilities/Utils.js .
+COPY ./cypress/support .
+COPY ./cypress/fixtures/ApiBody.json . 
 COPY ./cypress ./cypress 
 
 #install cypress dependencies in the work directory
