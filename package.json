@@ -8,7 +8,6 @@
       "cypress-open": "npx cypress open --config baseUrl=https://demo.spendkey.app/dashboard",
       "chrome:test": "npx cypress run --config baseUrl=https://demo.spendkey.app/dashboard --browser chrome --headed",
       "api-test-xml": "npx cypress run --spec ./cypress/e2e/apiTest/*.cy.js --reporter junit",
-      "ui-test": "npx cypress run --spec ./cypress/e2e/uiTest/login-tests.cy.js",
       "api-test-html": "npx cypress run --spec ./cypress/e2e/apiTest/*.cy.js",
       "report": "concurrently \"npm run api-test-xml\" \"npm run api-test-html\""
       
